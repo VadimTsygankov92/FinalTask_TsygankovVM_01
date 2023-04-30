@@ -8,6 +8,10 @@
 Console.Clear();
 
 string[] startArray = CreateArray();
+PrintArray(startArray);
+string[] finishArray = CreateNewArray(startArray);
+PrintArray(finishArray);
+
 
 
 string[] CreateArray()
@@ -23,6 +27,19 @@ string[] CreateArray()
   return array;
 }
 
+string[] CreateNewArray(string[] array)
+{
+  string[] newArray = new string[3];
+  for (int i = 0; i < 3; i++)
+  {
+    array[i] = Convert.ToString(new Random().Next(0, 10));
+    newArray[i] = array[i];
+
+  }
+
+  return newArray;
+}
+
 void PrintArray(string[] array)
 {
   Console.Write("[");
@@ -32,3 +49,4 @@ void PrintArray(string[] array)
   }
   Console.WriteLine(array[^1] + "]");
 }
+
