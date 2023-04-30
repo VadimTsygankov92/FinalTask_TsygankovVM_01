@@ -17,12 +17,12 @@ PrintArray(finishArray);
 string[] CreateArray()
 {
   Console.WriteLine("Введите длину массива: ");
-  int arrayLength = int.Parse(Console.ReadLine());
+  int arrayLength = int.Parse(Console.ReadLine()!);
   string[] array = new string[arrayLength];
   for (int i = 0; i < array.Length; i++)
   {
     Console.Write("Введите значение элемента: ");
-    array[i] = (Console.ReadLine());
+    array[i] = Convert.ToString(Console.ReadLine()!);
   }
   return array;
 }
